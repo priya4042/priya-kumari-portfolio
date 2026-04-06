@@ -1,0 +1,417 @@
+/* =============================================
+   GLOBAL RESPONSIVE OVERRIDES
+   Fills gaps in component-level media queries
+   ============================================= */
+
+/* ===== Global Section Spacing ===== */
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 0;
+  }
+  .section-header {
+    margin-bottom: 48px;
+  }
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+  .container {
+    padding: 0 16px;
+  }
+  .btn {
+    padding: 13px 28px;
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 60px 0;
+  }
+  .section-header {
+    margin-bottom: 36px;
+  }
+  .section-title {
+    font-size: 1.7rem;
+  }
+  .section-tag {
+    font-size: 0.75rem;
+  }
+}
+
+/* ===== Loader Responsive ===== */
+@media (max-width: 768px) {
+  .loader-ring-container {
+    width: 110px;
+    height: 110px;
+  }
+  .loader-name {
+    font-size: 1.3rem;
+  }
+  .loader-role {
+    font-size: 0.68rem;
+    letter-spacing: 2px;
+  }
+  .loader-bar {
+    width: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .loader-ring-container {
+    width: 90px;
+    height: 90px;
+  }
+  .loader-name {
+    font-size: 1.1rem;
+  }
+  .loader-bar {
+    width: 150px;
+  }
+}
+
+/* ===== About - Missing 768px ===== */
+@media (max-width: 768px) {
+  .about-grid {
+    gap: 44px;
+  }
+  .about-tilt-wrapper {
+    max-width: 300px;
+  }
+  .about-content h3 {
+    font-size: 1.35rem;
+  }
+  .about-experience-badge {
+    padding: 14px 18px;
+    bottom: -10px;
+    right: -10px;
+  }
+  .exp-number {
+    font-size: 1.8rem;
+  }
+  .about-project-badge {
+    padding: 10px 14px;
+    top: 12px;
+    left: -12px;
+  }
+  .about-highlights {
+    padding: 18px;
+    gap: 10px;
+  }
+}
+
+/* ===== Skills - Missing 1024px & 480px ===== */
+@media (max-width: 1024px) {
+  .skills-tabs {
+    max-width: 340px;
+  }
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .skill-card {
+    padding: 20px 12px 16px;
+    border-radius: 16px;
+  }
+  .skill-ring {
+    width: 76px;
+    height: 76px;
+  }
+  .skill-percent {
+    font-size: 1rem;
+  }
+  .skill-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 1.1rem;
+    margin-bottom: 14px;
+  }
+  .skill-card h3 {
+    font-size: 0.85rem;
+  }
+  .skill-desc {
+    display: none;
+  }
+  .skills-tabs {
+    max-width: 100%;
+  }
+  .skills-tab {
+    padding: 10px 16px;
+    font-size: 0.8rem;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-card {
+    padding: 28px 22px;
+  }
+}
+
+/* ===== Projects - Missing 1024px & 480px ===== */
+@media (max-width: 1024px) {
+  .projects-grid {
+    gap: 22px;
+  }
+  .project-content h3 {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-filters {
+    gap: 6px;
+    margin-bottom: 32px;
+  }
+  .filter-btn {
+    padding: 8px 16px;
+    font-size: 0.78rem;
+  }
+  .project-image-wrapper {
+    height: 170px;
+  }
+  .project-content {
+    padding: 18px;
+  }
+  .project-content p {
+    font-size: 0.82rem;
+    -webkit-line-clamp: 2;
+  }
+  .project-tech-tag {
+    font-size: 0.65rem;
+    padding: 3px 8px;
+  }
+}
+
+/* ===== Experience - Missing 1024px & 480px ===== */
+@media (max-width: 1024px) {
+  .timeline {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-item,
+  .timeline-item.left,
+  .timeline-item.right {
+    padding-left: 52px;
+    padding-bottom: 32px;
+  }
+  .timeline-dot {
+    width: 38px;
+    height: 38px;
+    font-size: 0.75rem;
+  }
+  .timeline-content {
+    padding: 20px;
+    border-radius: 14px;
+  }
+  .timeline-content h3 {
+    font-size: 1.1rem;
+  }
+  .timeline-tech span {
+    font-size: 0.68rem;
+    padding: 3px 10px;
+  }
+  .timeline-achievements {
+    padding: 14px;
+  }
+  .achievement-item span {
+    font-size: 0.8rem;
+  }
+  .mini-project {
+    padding: 10px 12px;
+  }
+}
+
+/* ===== Education - Missing 1024px & 480px ===== */
+@media (max-width: 1024px) {
+  .education-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .edu-card {
+    padding: 24px 20px;
+  }
+  .edu-card h3 {
+    font-size: 1rem;
+  }
+  .edu-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+  }
+  .edu-year-badge {
+    font-size: 0.72rem;
+    padding: 5px 12px;
+  }
+  .edu-card-number {
+    font-size: 2.5rem;
+  }
+}
+
+/* ===== Contact - Missing 768px ===== */
+@media (max-width: 768px) {
+  .contact-cta-banner {
+    padding: 28px 24px;
+  }
+  .cta-banner-content h3 {
+    font-size: 1.2rem;
+  }
+  .contact-card {
+    padding: 18px;
+  }
+  .contact-card-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1rem;
+  }
+  .social-link {
+    width: 46px;
+    height: 46px;
+  }
+  .code-block {
+    display: none;
+  }
+  .form-title {
+    font-size: 1.1rem;
+  }
+}
+
+/* ===== Footer Responsive ===== */
+@media (max-width: 768px) {
+  .footer {
+    padding: 36px 0;
+  }
+  .footer-links {
+    gap: 16px;
+  }
+  .footer-link {
+    font-size: 0.8rem;
+  }
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+  }
+  .back-to-top a {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .copyright {
+    font-size: 0.72rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer-logo-link .logo-text-group {
+    display: none;
+  }
+}
+
+/* ===== Logo - 768px handling ===== */
+@media (max-width: 768px) {
+  .logo-nav .logo-text-role {
+    display: none;
+  }
+  .logo-nav .logo-text-name {
+    font-size: 0.95rem;
+  }
+}
+
+/* ===== Navbar Mobile Polish ===== */
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0 14px;
+  }
+  .mobile-menu {
+    width: 85%;
+  }
+}
+
+/* ===== Fix for very large screens ===== */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1280px;
+  }
+  .hero-container {
+    max-width: 1280px;
+    gap: 80px;
+  }
+}
+
+/* ===== Landscape phone ===== */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    padding: 100px 0 40px;
+  }
+  .scroll-indicator {
+    display: none;
+  }
+  .hero-image-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+  .hero-stats-bar {
+    margin-top: 20px;
+  }
+}
+
+/* ===== Touch device optimizations ===== */
+@media (hover: none) and (pointer: coarse) {
+  /* Disable hover-only effects on touch devices */
+  .skill-card:hover .skill-card-glow,
+  .edu-card:hover .edu-top-bar,
+  .project-card:hover .project-image-overlay {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+
+  .project-image-overlay {
+    opacity: 1 !important;
+    background: linear-gradient(
+      180deg,
+      rgba(10, 10, 15, 0) 0%,
+      rgba(10, 10, 15, 0.3) 50%,
+      rgba(10, 10, 15, 0.7) 100%
+    ) !important;
+  }
+}
+
+/* ===== Print styles ===== */
+@media print {
+  .navbar,
+  .back-to-top,
+  .scroll-indicator,
+  .hero-gradient-orb,
+  .hero-grid-pattern,
+  #tsparticles,
+  .cursor-dot,
+  .cursor-ring {
+    display: none !important;
+  }
+
+  .section {
+    padding: 30px 0;
+    break-inside: avoid;
+  }
+
+  body {
+    background: #fff;
+    color: #333;
+  }
+}

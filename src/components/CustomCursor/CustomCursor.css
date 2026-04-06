@@ -1,0 +1,78 @@
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent-1);
+  border-radius: 50%;
+  position: fixed;
+  top: -4px;
+  left: -4px;
+  pointer-events: none;
+  z-index: 100001;
+  mix-blend-mode: difference;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.cursor-dot.clicking {
+  transform: scale(0.5);
+  background: var(--accent-2);
+}
+
+.cursor-ring {
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(108, 99, 255, 0.45);
+  border-radius: 50%;
+  position: fixed;
+  top: -20px;
+  left: -20px;
+  pointer-events: none;
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+              height 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+              border-color 0.3s ease,
+              background 0.3s ease;
+}
+
+.cursor-ring.hovering {
+  width: 64px;
+  height: 64px;
+  top: -32px;
+  left: -32px;
+  border-color: rgba(255, 107, 157, 0.5);
+  background: rgba(108, 99, 255, 0.06);
+  backdrop-filter: blur(2px);
+}
+
+.cursor-ring.clicking {
+  width: 32px;
+  height: 32px;
+  top: -16px;
+  left: -16px;
+  border-color: var(--accent-2);
+}
+
+.cursor-text {
+  font-size: 0.55rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--accent-2);
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none !important;
+  }
+}
+
+/* Hide default cursor globally on desktop */
+@media (min-width: 769px) {
+  * {
+    cursor: none !important;
+  }
+}

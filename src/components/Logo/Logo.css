@@ -1,0 +1,92 @@
+.logo-component {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  user-select: none;
+}
+
+.logo-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.logo-component:hover .logo-icon-wrapper {
+  transform: scale(1.05);
+}
+
+.logo-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: drop-shadow(0 2px 8px rgba(108, 99, 255, 0.25));
+  transition: filter 0.3s ease;
+}
+
+.logo-component:hover .logo-svg {
+  filter: drop-shadow(0 4px 16px rgba(108, 99, 255, 0.4));
+}
+
+/* Text group */
+.logo-text-group {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.logo-text-name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.3px;
+}
+
+.logo-text-role {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* ===== Size variants ===== */
+
+/* Nav - used in navbar */
+.logo-nav .logo-text-name {
+  font-size: 1.15rem;
+  letter-spacing: -0.5px;
+}
+.logo-nav .logo-text-role {
+  font-size: 0.58rem;
+  letter-spacing: 2px;
+  margin-top: 1px;
+}
+
+/* Small */
+.logo-sm .logo-text-name { font-size: 0.9rem; }
+.logo-sm .logo-text-role { font-size: 0.55rem; }
+
+/* Large */
+.logo-lg .logo-text-name { font-size: 1.2rem; }
+.logo-lg .logo-text-role { font-size: 0.7rem; }
+
+/* XL */
+.logo-xl .logo-text-name { font-size: 1.5rem; }
+.logo-xl .logo-text-role { font-size: 0.78rem; }
+
+/* Loader */
+.logo-loader .logo-text-name { font-size: 1.8rem; }
+.logo-loader .logo-text-role { font-size: 0.85rem; }
+
+/* Hide role text on very small screens for nav */
+@media (max-width: 480px) {
+  .logo-nav .logo-text-group {
+    display: none;
+  }
+}
