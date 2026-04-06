@@ -13,8 +13,10 @@ export const personalInfo = {
   phone: '+91 9733673826',
   location: 'Kangra, Himachal Pradesh, India',
   github: 'https://github.com/priya4042',
-  linkedin: 'https://linkedin.com',
-  // Professional developer image from Unsplash
+  linkedin: 'https://www.linkedin.com/in/priya-kumari-developer', // UPDATE THIS with your real LinkedIn URL
+  // IMPORTANT: Replace these with your real photos for authenticity
+  // Upload your photo to the public/ folder and use '/your-photo.jpg'
+  // Or use a direct image URL from LinkedIn/Google Drive
   heroImage: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=600&fit=crop&crop=face',
   aboutImage: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&h=650&fit=crop&crop=face',
   stats: [
@@ -63,6 +65,8 @@ export const projectsData = [
     technologies: ['ASP.NET Core', 'REST API', 'SQL Server', 'JavaScript'],
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
     color: '#6c63ff',
+    github: 'https://github.com/priya4042', // UPDATE: Add real repo link if available
+    live: null, // UPDATE: Add live demo link if available
   },
   {
     title: 'Hunt Lease Management',
@@ -71,6 +75,8 @@ export const projectsData = [
     technologies: ['ASP.NET MVC', 'SQL Server', 'jQuery', 'Bootstrap'],
     image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop',
     color: '#ff6b9d',
+    github: 'https://github.com/priya4042',
+    live: null,
   },
   {
     title: 'Property Tax Portal',
@@ -79,6 +85,8 @@ export const projectsData = [
     technologies: ['ASP.NET', 'JavaScript', 'SQL Server', 'Web Forms'],
     image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=400&fit=crop',
     color: '#4ecdc4',
+    github: 'https://github.com/priya4042',
+    live: null,
   },
   {
     title: 'Forest Information Portal',
@@ -87,6 +95,8 @@ export const projectsData = [
     technologies: ['ASP.NET Core', 'REST API', 'MS SQL', 'jQuery'],
     image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop',
     color: '#f7df1e',
+    github: 'https://github.com/priya4042',
+    live: null,
   },
 ];
 
@@ -173,5 +183,26 @@ export const servicesData = [
     title: 'Database Design',
     description: 'Efficient database architecture, complex queries, and performance optimization.',
     icon: 'database',
+  },
+];
+
+export const testimonialsData = [
+  {
+    name: 'Team Lead',
+    role: 'SoftWebPos',
+    text: 'Priya is an exceptional developer who consistently delivers high-quality code. Her API integration skills are outstanding, and she has a great ability to break down complex problems into manageable solutions.',
+    rating: 5,
+  },
+  {
+    name: 'Project Manager',
+    role: 'CS Soft Solution',
+    text: 'Working with Priya was a pleasure. She delivered three major projects within tight deadlines and always maintained excellent code quality. Her dedication and problem-solving skills are truly impressive.',
+    rating: 5,
+  },
+  {
+    name: 'Senior Developer',
+    role: 'SoftWebPos',
+    text: 'Priya quickly became a key contributor to our team. Her understanding of .NET and SQL Server is solid, and she has shown great initiative in mentoring junior developers and improving our codebase.',
+    rating: 5,
   },
 ];

@@ -163,7 +163,37 @@
 
 .project-footer {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: rgba(108, 99, 255, 0.06);
+  border: 1px solid rgba(108, 99, 255, 0.15);
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  background: rgba(108, 99, 255, 0.12);
+  border-color: var(--accent-1);
+  color: var(--accent-1);
+}
+
+.project-link-live {
+  border-color: rgba(78, 205, 196, 0.2);
+}
+
+.project-link-live:hover {
+  border-color: var(--accent-3);
+  color: var(--accent-3);
 }
 
 .project-learn-more {

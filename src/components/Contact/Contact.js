@@ -1,28 +1,66 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import emailjs from '@emailjs/browser';
 import {
   FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedinIn,
-  FaPaperPlane, FaCheck, FaSpinner, FaArrowRight,
+  FaPaperPlane, FaCheck, FaSpinner, FaArrowRight, FaExclamationTriangle,
 } from 'react-icons/fa';
 import { personalInfo } from '../../data/portfolioData';
 import './Contact.css';
 
+/*
+ * =============================================
+ *  EmailJS SETUP INSTRUCTIONS
+ * =============================================
+ *  1. Go to https://www.emailjs.com/ and create a free account
+ *  2. Add an Email Service (Gmail, Outlook, etc.)
+ *  3. Create an Email Template with variables: {{from_name}}, {{from_email}}, {{subject}}, {{message}}
+ *  4. Replace the values below with YOUR IDs from the EmailJS dashboard:
+ */
+const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';    // Replace with your EmailJS Service ID
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // Replace with your EmailJS Template ID
+const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';     // Replace with your EmailJS Public Key
+
 const Contact = () => {
   const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
-  const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
-  const [status, setStatus] = useState('idle');
+  const formRef = useRef();
+  const [formData, setFormData] = useState({ from_name: '', from_email: '', subject: '', message: '' });
+  const [status, setStatus] = useState('idle'); // idle, sending, sent, error
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setStatus('sending');
-    setTimeout(() => {
+
+    // Check if EmailJS is configured
+    if (EMAILJS_SERVICE_ID === 'YOUR_SERVICE_ID') {
+      // Fallback: Open email client if EmailJS not configured
+      const mailtoLink = `mailto:${personalInfo.email}?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
+        `Name: ${formData.from_name}\nEmail: ${formData.from_email}\n\n${formData.message}`
+      )}`;
+      window.open(mailtoLink, '_blank');
       setStatus('sent');
       setTimeout(() => {
         setStatus('idle');
-        setFormData({ name: '', email: '', subject: '', message: '' });
+        setFormData({ from_name: '', from_email: '', subject: '', message: '' });
       }, 3000);
-    }, 1500);
+      return;
+    }
+
+    // Send via EmailJS
+    emailjs
+      .sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formRef.current, EMAILJS_PUBLIC_KEY)
+      .then(() => {
+        setStatus('sent');
+        setTimeout(() => {
+          setStatus('idle');
+          setFormData({ from_name: '', from_email: '', subject: '', message: '' });
+        }, 3000);
+      })
+      .catch(() => {
+        setStatus('error');
+        setTimeout(() => setStatus('idle'), 3000);
+      });
   };
 
   const handleChange = (e) => {
@@ -85,7 +123,7 @@ const Contact = () => {
                 { icon: <FaGithub />, href: personalInfo.github, label: 'GitHub' },
                 { icon: <FaLinkedinIn />, href: personalInfo.linkedin, label: 'LinkedIn' },
                 { icon: <FaEnvelope />, href: `mailto:${personalInfo.email}`, label: 'Email' },
-              ].map((social, i) => (
+              ].map((social) => (
                 <motion.a
                   key={social.label}
                   href={social.href}
@@ -95,6 +133,7 @@ const Contact = () => {
                   whileHover={{ y: -6, scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   data-cursor={social.label}
+                  aria-label={`Visit ${social.label}`}
                 >
                   {social.icon}
                 </motion.a>
@@ -124,12 +163,8 @@ const Contact = () => {
                     <span className="code-string">[".NET", "JS", "SQL"]</span>,
                   </span>
                   <span className="code-line code-indent">
-                    <span className="code-prop">available</span>:{' '}
-                    <span className="code-bool">true</span>,
-                  </span>
-                  <span className="code-line code-indent">
                     <span className="code-prop">hireable</span>:{' '}
-                    <span className="code-bool">true</span> ✨
+                    <span className="code-bool">true</span>
                   </span>
                   <span className="code-line">{'};'}</span>
                 </div>
@@ -137,19 +172,19 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          <motion.form className="contact-form" {...fadeUp(0.3)} onSubmit={handleSubmit}>
+          <motion.form className="contact-form" {...fadeUp(0.3)} onSubmit={handleSubmit} ref={formRef}>
             <h3 className="form-title">Send me a message</h3>
             <div className="form-row">
               <div className="form-group">
                 <div className="input-wrapper">
-                  <input type="text" name="name" value={formData.name} onChange={handleChange} required placeholder=" " />
+                  <input type="text" name="from_name" value={formData.from_name} onChange={handleChange} required placeholder=" " aria-label="Your name" />
                   <label>Your Name</label>
                   <span className="input-highlight" />
                 </div>
               </div>
               <div className="form-group">
                 <div className="input-wrapper">
-                  <input type="email" name="email" value={formData.email} onChange={handleChange} required placeholder=" " />
+                  <input type="email" name="from_email" value={formData.from_email} onChange={handleChange} required placeholder=" " aria-label="Your email" />
                   <label>Your Email</label>
                   <span className="input-highlight" />
                 </div>
@@ -157,14 +192,14 @@ const Contact = () => {
             </div>
             <div className="form-group">
               <div className="input-wrapper">
-                <input type="text" name="subject" value={formData.subject} onChange={handleChange} required placeholder=" " />
+                <input type="text" name="subject" value={formData.subject} onChange={handleChange} required placeholder=" " aria-label="Subject" />
                 <label>Subject</label>
                 <span className="input-highlight" />
               </div>
             </div>
             <div className="form-group">
               <div className="input-wrapper">
-                <textarea name="message" rows="5" value={formData.message} onChange={handleChange} required placeholder=" " />
+                <textarea name="message" rows="5" value={formData.message} onChange={handleChange} required placeholder=" " aria-label="Your message" />
                 <label>Your Message</label>
                 <span className="input-highlight" />
               </div>
@@ -175,10 +210,12 @@ const Contact = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               disabled={status !== 'idle'}
+              aria-label="Send message"
             >
               {status === 'idle' && (<><span>Send Message</span><FaPaperPlane /></>)}
               {status === 'sending' && (<><span>Sending...</span><FaSpinner className="spin" /></>)}
               {status === 'sent' && (<><span>Message Sent!</span><FaCheck /></>)}
+              {status === 'error' && (<><span>Failed! Try again</span><FaExclamationTriangle /></>)}
             </motion.button>
           </motion.form>
         </div>

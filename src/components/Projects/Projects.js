@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Tilt from 'react-parallax-tilt';
-import { FaExternalLinkAlt, FaArrowRight } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaArrowRight, FaGithub } from 'react-icons/fa';
 import { projectsData } from '../../data/portfolioData';
 import './Projects.css';
 
@@ -121,6 +121,16 @@ const Projects = () => {
                       ))}
                     </div>
                     <div className="project-footer">
+                      {project.github && (
+                        <a href={project.github} target="_blank" rel="noreferrer" className="project-link" aria-label={`View ${project.title} on GitHub`}>
+                          <FaGithub /> Code
+                        </a>
+                      )}
+                      {project.live && (
+                        <a href={project.live} target="_blank" rel="noreferrer" className="project-link project-link-live" aria-label={`View ${project.title} live demo`}>
+                          <FaExternalLinkAlt /> Live
+                        </a>
+                      )}
                       <span className="project-learn-more">
                         Learn more <FaArrowRight />
                       </span>

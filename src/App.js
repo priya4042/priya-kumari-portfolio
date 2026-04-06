@@ -14,6 +14,7 @@ import Projects from './components/Projects/Projects';
 import Experience from './components/Experience/Experience';
 import Education from './components/Education/Education';
 import Contact from './components/Contact/Contact';
+import Testimonials from './components/Testimonials/Testimonials';
 // Interview prep data is in src/data/interviewData.js — for personal study only
 import Footer, { BackToTop } from './components/Footer/Footer';
 
@@ -47,6 +48,7 @@ function App() {
             <Projects />
             <Experience />
             <Education />
+            <Testimonials />
             <Contact />
           </main>
           <Footer />
