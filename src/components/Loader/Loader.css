@@ -6,75 +6,144 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+/* Subtle dot grid background */
+.loader-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.6;
 }
 
 .loader-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
+  gap: 24px;
+  position: relative;
+  z-index: 1;
 }
 
-/* Apple-style spinner */
-.loader-spinner-wrap {
-  width: 44px;
-  height: 44px;
+/* ===== Animated Initials Circle ===== */
+.loader-initials {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
 }
 
-.loader-spinner {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 2.5px solid rgba(0, 0, 0, 0.08);
-  border-top-color: var(--text-primary);
-}
-
-/* Text */
-.loader-text-group {
-  text-align: center;
-}
-
-.loader-name {
+.loader-initial-text {
   font-family: var(--font-display);
-  font-size: 1.8rem;
+  font-size: 2rem;
+  font-weight: 800;
+  font-style: italic;
+  color: var(--text-primary);
+  position: relative;
+  z-index: 2;
+}
+
+.loader-initial-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1.5px solid transparent;
+  border-top-color: var(--text-primary);
+  border-right-color: rgba(0, 0, 0, 0.06);
+}
+
+.loader-initial-ring-2 {
+  inset: 8px;
+  border-top-color: rgba(0, 113, 227, 0.4);
+  border-right-color: rgba(0, 113, 227, 0.08);
+}
+
+/* ===== Letter-by-letter Name ===== */
+.loader-name {
+  display: flex;
+  overflow: hidden;
+  perspective: 400px;
+}
+
+.loader-letter {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 2.4rem;
   font-weight: 700;
   color: var(--text-primary);
   letter-spacing: -0.5px;
-  margin-bottom: 10px;
+  transform-origin: bottom center;
 }
 
-.loader-divider {
-  width: 32px;
-  height: 1.5px;
-  background: var(--text-primary);
-  margin: 0 auto 10px;
-  opacity: 0.15;
-}
-
-.loader-role {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-/* Progress bar */
-.loader-bar {
-  width: 180px;
+/* ===== Animated Divider ===== */
+.loader-line {
+  width: 48px;
   height: 2px;
-  background: rgba(0, 0, 0, 0.06);
+  background: linear-gradient(90deg, transparent, var(--text-primary), transparent);
+  transform-origin: center;
+}
+
+/* ===== Role Text ===== */
+.loader-role {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+/* ===== Progress Bar ===== */
+.loader-progress {
+  width: 200px;
+  margin-top: 8px;
+}
+
+.loader-bar {
+  width: 100%;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   overflow: hidden;
 }
 
 .loader-bar-fill {
   height: 100%;
-  background: var(--text-primary);
+  background: linear-gradient(90deg, var(--text-primary), rgba(0, 113, 227, 0.6));
   border-radius: 10px;
 }
 
+/* ===== Pulsing Dots ===== */
+.loader-dots {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.loader-dot {
+  width: 4px;
+  height: 4px;
+  background: var(--text-muted);
+  border-radius: 50%;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .loader-initials { width: 72px; height: 72px; }
+  .loader-initial-text { font-size: 1.6rem; }
+  .loader-letter { font-size: 1.8rem; }
+  .loader-progress { width: 160px; }
+}
+
 @media (max-width: 480px) {
-  .loader-name { font-size: 1.4rem; }
-  .loader-bar { width: 140px; }
+  .loader-initials { width: 60px; height: 60px; }
+  .loader-initial-text { font-size: 1.3rem; }
+  .loader-letter { font-size: 1.5rem; }
+  .loader-line { width: 36px; }
+  .loader-progress { width: 130px; }
+  .loader-role { font-size: 0.65rem; letter-spacing: 3px; }
 }
