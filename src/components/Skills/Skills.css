@@ -5,7 +5,7 @@
 .skills-tab:not(.active):hover { color: var(--text-primary); background: var(--bg-primary); }
 
 .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-.skill-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 28px 20px 22px; text-align: center; position: relative; overflow: hidden; transition: all 0.3s ease; box-shadow: var(--shadow-sm); }
+.skill-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 24px 20px; text-align: center; position: relative; overflow: hidden; transition: all 0.3s ease; box-shadow: var(--shadow-sm); }
 .skill-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-6px); }
 .skill-card-glow { display: none; }
 .skill-icon { width: 52px; height: 52px; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; border-radius: 14px; font-size: 1.4rem; transition: transform 0.3s ease; }

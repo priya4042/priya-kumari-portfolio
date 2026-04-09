@@ -41,7 +41,7 @@
 
 .desktop-menu {
   display: flex;
-  gap: 2px;
+  gap: 6px;
 }
 
 .nav-link {
@@ -162,7 +162,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
   padding: 20px 16px;
 }
 
