@@ -24,17 +24,17 @@ const Logo = ({ size = 'md', showText = false, className = '' }) => {
         >
           <defs>
             <linearGradient id="logoGradBg" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#12122a" />
-              <stop offset="100%" stopColor="#0a0a18" />
+              <stop offset="0%" stopColor="#1a1a1a" />
+              <stop offset="100%" stopColor="#141414" />
             </linearGradient>
             <linearGradient id="logoGradText" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#6c63ff" />
-              <stop offset="100%" stopColor="#ff6b9d" />
+              <stop offset="0%" stopColor="#c9a96e" />
+              <stop offset="100%" stopColor="#d4b483" />
             </linearGradient>
             <linearGradient id="logoGradBorder" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#6c63ff" stopOpacity="0.6" />
-              <stop offset="50%" stopColor="#a78bfa" stopOpacity="0.3" />
-              <stop offset="100%" stopColor="#ff6b9d" stopOpacity="0.6" />
+              <stop offset="0%" stopColor="#c9a96e" stopOpacity="0.6" />
+              <stop offset="50%" stopColor="#d4b483" stopOpacity="0.3" />
+              <stop offset="100%" stopColor="#d4b483" stopOpacity="0.6" />
             </linearGradient>
             <filter id="logoGlow">
               <feGaussianBlur stdDeviation="3" result="blur" />
@@ -96,7 +96,7 @@ const Logo = ({ size = 'md', showText = false, className = '' }) => {
           {/* Slash / */}
           <path
             d="M85 85L93 75"
-            stroke="#4ecdc4"
+            stroke="#a8d8c8"
             strokeWidth="3.5"
             strokeLinecap="round"
             opacity="0.8"
@@ -119,8 +119,8 @@ const Logo = ({ size = 'md', showText = false, className = '' }) => {
           />
 
           {/* Accent dot */}
-          <circle cx="104" cy="24" r="5" fill="#4ecdc4" opacity="0.7" />
-          <circle cx="104" cy="24" r="2.5" fill="#4ecdc4" />
+          <circle cx="104" cy="24" r="5" fill="#a8d8c8" opacity="0.7" />
+          <circle cx="104" cy="24" r="2.5" fill="#a8d8c8" />
         </svg>
       </span>
       {showText && (

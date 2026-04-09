@@ -46,13 +46,13 @@ export const aboutData = {
 
 // Skills — NO percentages, just level labels
 export const skillsData = [
-  { name: '.NET', subtitle: 'Framework & Core', level: 'Expert', icon: 'microsoft', color: '#6c63ff', description: 'Building enterprise-grade applications', usedIn: 'CRM Integration Platform' },
-  { name: 'ASP.NET', subtitle: 'Web Applications', level: 'Expert', icon: 'code', color: '#ff6b9d', description: 'Scalable MVC web solutions', usedIn: 'Property Tax Portal' },
-  { name: 'ASP.NET MVC', subtitle: 'Architecture', level: 'Expert', icon: 'layers', color: '#4ecdc4', description: 'Clean architecture patterns', usedIn: 'Forest Information Portal' },
-  { name: 'JavaScript', subtitle: 'Frontend & Logic', level: 'Advanced', icon: 'js', color: '#f7df1e', description: 'Interactive user experiences', usedIn: 'All Projects' },
-  { name: 'SQL Server', subtitle: 'Database Mgmt', level: 'Advanced', icon: 'database', color: '#6c63ff', description: 'Complex queries & optimization', usedIn: 'CRM Integration Platform' },
-  { name: 'jQuery', subtitle: 'DOM Manipulation', level: 'Advanced', icon: 'jquery', color: '#ff6b9d', description: 'Dynamic frontend effects', usedIn: 'Hunt Lease Management' },
-  { name: 'REST API', subtitle: 'Integration', level: 'Advanced', icon: 'api', color: '#4ecdc4', description: 'Seamless service connections', usedIn: 'CRM Integration Platform' },
+  { name: '.NET', subtitle: 'Framework & Core', level: 'Expert', icon: 'microsoft', color: '#c9a96e', description: 'Building enterprise-grade applications', usedIn: 'CRM Integration Platform' },
+  { name: 'ASP.NET', subtitle: 'Web Applications', level: 'Expert', icon: 'code', color: '#d4b483', description: 'Scalable MVC web solutions', usedIn: 'Property Tax Portal' },
+  { name: 'ASP.NET MVC', subtitle: 'Architecture', level: 'Expert', icon: 'layers', color: '#a8d8c8', description: 'Clean architecture patterns', usedIn: 'Forest Information Portal' },
+  { name: 'JavaScript', subtitle: 'Frontend & Logic', level: 'Advanced', icon: 'js', color: '#c9a96e', description: 'Interactive user experiences', usedIn: 'All Projects' },
+  { name: 'SQL Server', subtitle: 'Database Mgmt', level: 'Advanced', icon: 'database', color: '#c9a96e', description: 'Complex queries & optimization', usedIn: 'CRM Integration Platform' },
+  { name: 'jQuery', subtitle: 'DOM Manipulation', level: 'Advanced', icon: 'jquery', color: '#d4b483', description: 'Dynamic frontend effects', usedIn: 'Hunt Lease Management' },
+  { name: 'REST API', subtitle: 'Integration', level: 'Advanced', icon: 'api', color: '#a8d8c8', description: 'Seamless service connections', usedIn: 'CRM Integration Platform' },
 ];
 
 // Services linked to projects
@@ -91,7 +91,7 @@ export const projectsData = [
     description: 'Led the development of a comprehensive CRM integration platform connecting multiple third-party services with seamless API orchestration.',
     technologies: ['ASP.NET Core', 'REST API', 'SQL Server', 'JavaScript'],
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
-    color: '#6c63ff',
+    color: '#c9a96e',
     github: 'https://github.com/priya4042',
     live: null,
     star: {
@@ -107,7 +107,7 @@ export const projectsData = [
     description: 'Built a full-featured lease management system for tracking property agreements, payments, and tenant communications.',
     technologies: ['ASP.NET MVC', 'SQL Server', 'jQuery', 'Bootstrap'],
     image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop',
-    color: '#ff6b9d',
+    color: '#d4b483',
     github: 'https://github.com/priya4042',
     live: null,
     star: {
@@ -123,7 +123,7 @@ export const projectsData = [
     description: 'Developed a citizen-facing property tax calculation and payment platform used by local government bodies.',
     technologies: ['ASP.NET', 'JavaScript', 'SQL Server', 'Web Forms'],
     image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=400&fit=crop',
-    color: '#4ecdc4',
+    color: '#a8d8c8',
     github: 'https://github.com/priya4042',
     live: null,
     star: {
@@ -139,7 +139,7 @@ export const projectsData = [
     description: 'Created an information portal for forest management and data visualization serving government departments.',
     technologies: ['ASP.NET Core', 'REST API', 'MS SQL', 'jQuery'],
     image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop',
-    color: '#f7df1e',
+    color: '#c9a96e',
     github: 'https://github.com/priya4042',
     live: null,
     star: {
@@ -155,7 +155,7 @@ export const projectsData = [
     description: 'Designed and developed this modern animated portfolio using React.js, Framer Motion, and custom PDF resume generation.',
     technologies: ['React.js', 'Framer Motion', 'CSS3', 'jsPDF'],
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
-    color: '#6c63ff',
+    color: '#c9a96e',
     github: 'https://github.com/priya4042/priya-kumari-portfolio',
     live: 'https://priya4042.github.io/priya-kumari-portfolio',
     star: {

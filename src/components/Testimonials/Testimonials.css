@@ -21,7 +21,7 @@
 
 .testimonial-card.active {
   pointer-events: auto;
-  border-color: rgba(108, 99, 255, 0.15);
+  border-color: rgba(201, 169, 110, 0.15);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
 }
 
@@ -48,7 +48,7 @@
 }
 
 .star-icon {
-  color: #f7df1e;
+  color: #c9a96e;
   font-size: 0.9rem;
 }
 
@@ -112,7 +112,7 @@
 .testi-btn:hover {
   border-color: var(--accent-1);
   color: var(--accent-1);
-  background: rgba(108, 99, 255, 0.06);
+  background: rgba(201, 169, 110, 0.06);
 }
 
 .testimonial-dots {
@@ -124,7 +124,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: rgba(108, 99, 255, 0.15);
+  background: rgba(201, 169, 110, 0.15);
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;

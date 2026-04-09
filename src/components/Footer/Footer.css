@@ -14,7 +14,7 @@
   transform: translateX(-50%);
   width: 400px;
   height: 200px;
-  background: radial-gradient(circle, rgba(108, 99, 255, 0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(201, 169, 110, 0.06) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -72,7 +72,7 @@
 }
 
 .react-icon {
-  color: #61dafb;
+  color: #a8d8c8;
   font-size: 0.82rem;
   animation: reactSpin 4s linear infinite;
 }
@@ -115,10 +115,10 @@
   color: #fff;
   font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0 8px 30px rgba(108, 99, 255, 0.3);
+  box-shadow: 0 8px 30px rgba(201, 169, 110, 0.3);
   transition: box-shadow 0.3s ease;
 }
 
 .back-to-top a:hover {
-  box-shadow: 0 12px 44px rgba(108, 99, 255, 0.5);
+  box-shadow: 0 12px 44px rgba(201, 169, 110, 0.5);
 }

@@ -43,7 +43,7 @@ const Education = () => {
                 tiltMaxAngleY={8}
                 glareEnable={true}
                 glareMaxOpacity={0.08}
-                glareColor="#6c63ff"
+                glareColor="#c9a96e"
                 glareBorderRadius="22px"
                 scale={1.02}
               >

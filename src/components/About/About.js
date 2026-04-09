@@ -43,7 +43,7 @@ const About = () => {
               tiltMaxAngleY={8}
               glareEnable={true}
               glareMaxOpacity={0.12}
-              glareColor="#6c63ff"
+              glareColor="#c9a96e"
               glarePosition="all"
               glareBorderRadius="24px"
               className="about-tilt-wrapper"
@@ -123,7 +123,7 @@ const About = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ delay: 0.7 + i * 0.1 }}
-                    whileHover={{ y: -4, borderColor: 'rgba(108, 99, 255, 0.3)' }}
+                    whileHover={{ y: -4, borderColor: 'rgba(201, 169, 110, 0.3)' }}
                   >
                     <div className="info-icon">
                       <Icon />
