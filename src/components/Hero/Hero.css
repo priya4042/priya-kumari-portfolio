@@ -336,9 +336,10 @@
   height: 100%;
   border-radius: 50%;
   padding: 4px;
-  background: var(--text-primary);
+  background: linear-gradient(135deg, #1d1d1f, #6e6e73, #0071e3, #34c759, #1d1d1f);
+  background-size: 300% 300%;
+  animation: heroFloat 7s ease-in-out infinite, gradientShift 6s ease infinite;
   box-shadow: var(--shadow-lg);
-  animation: heroFloat 7s ease-in-out infinite;
 }
 
 .hero-image {

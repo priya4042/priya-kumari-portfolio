@@ -1,0 +1,264 @@
+/* =============================================
+   GLOBAL ANIMATIONS — Apple-Inspired Polish
+   ============================================= */
+
+/* ===== Smooth Section Reveal ===== */
+.section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: sectionReveal 0.8s ease forwards;
+  animation-play-state: paused;
+}
+
+.section.revealed {
+  animation-play-state: running;
+}
+
+@keyframes sectionReveal {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Animated Gradient Border ===== */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== Card Shine Effect on Hover ===== */
+.card-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-shine::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.03) 45%,
+    rgba(255, 255, 255, 0.08) 50%,
+    rgba(255, 255, 255, 0.03) 55%,
+    transparent 60%
+  );
+  transform: translateX(-100%) translateY(-100%) rotate(0deg);
+  transition: none;
+  pointer-events: none;
+}
+
+.card-shine:hover::after {
+  transform: translateX(30%) translateY(30%) rotate(0deg);
+  transition: transform 0.8s ease;
+}
+
+/* ===== Button Ripple Effect ===== */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 10%, transparent 10%);
+  background-size: 1000% 1000%;
+  background-position: center;
+  opacity: 0;
+  transition: background-size 0.5s ease, opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.btn:active::after {
+  background-size: 0% 0%;
+  opacity: 1;
+  transition: 0s;
+}
+
+/* ===== Link Underline Animation ===== */
+.animated-link {
+  position: relative;
+  display: inline-block;
+}
+
+.animated-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--text-primary);
+  transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.animated-link:hover::after {
+  width: 100%;
+}
+
+/* ===== Marquee / Ticker ===== */
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 24px 0;
+  position: relative;
+  mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 48px;
+  animation: marqueeScroll 30s linear infinite;
+  width: max-content;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  white-space: nowrap;
+  transition: color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.marquee-item:hover {
+  color: var(--text-primary);
+}
+
+.marquee-item svg {
+  font-size: 1.2rem;
+}
+
+.marquee-dot {
+  width: 5px;
+  height: 5px;
+  background: var(--border-color);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ===== Section Divider ===== */
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.section-divider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0,113,227,0.3), transparent);
+  animation: dividerShine 4s ease-in-out infinite;
+}
+
+@keyframes dividerShine {
+  0% { left: -60%; }
+  100% { left: 160%; }
+}
+
+/* ===== Floating Badge Pulse ===== */
+@keyframes badgePulse {
+  0%, 100% { box-shadow: var(--shadow-md); }
+  50% { box-shadow: var(--shadow-lg), 0 0 0 8px rgba(0, 113, 227, 0.04); }
+}
+
+/* ===== Smooth Number Counter ===== */
+.stat-number {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.stat-item:hover .stat-number {
+  transform: scale(1.08);
+}
+
+/* ===== Image Zoom on Scroll ===== */
+.scroll-zoom {
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ===== Stagger Fade Children ===== */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.stagger-children.revealed > *:nth-child(1) { animation: fadeUp 0.5s ease 0.0s forwards; }
+.stagger-children.revealed > *:nth-child(2) { animation: fadeUp 0.5s ease 0.08s forwards; }
+.stagger-children.revealed > *:nth-child(3) { animation: fadeUp 0.5s ease 0.16s forwards; }
+.stagger-children.revealed > *:nth-child(4) { animation: fadeUp 0.5s ease 0.24s forwards; }
+.stagger-children.revealed > *:nth-child(5) { animation: fadeUp 0.5s ease 0.32s forwards; }
+.stagger-children.revealed > *:nth-child(6) { animation: fadeUp 0.5s ease 0.40s forwards; }
+.stagger-children.revealed > *:nth-child(7) { animation: fadeUp 0.5s ease 0.48s forwards; }
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Smooth Card Lift ===== */
+.lift-card {
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.lift-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08), 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+
+/* ===== Text Gradient Shimmer ===== */
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    var(--text-primary) 0%,
+    var(--text-muted) 40%,
+    var(--text-primary) 60%,
+    var(--text-primary) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmerText 3s ease-in-out infinite;
+}
+
+@keyframes shimmerText {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ===== Responsive: reduce motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  .marquee-track { animation: none; }
+}
