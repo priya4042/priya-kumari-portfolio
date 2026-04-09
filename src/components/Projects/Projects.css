@@ -24,11 +24,11 @@
   background: var(--gradient-primary);
   border-color: transparent;
   color: #fff;
-  box-shadow: 0 4px 20px rgba(201, 169, 110, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .filter-btn:not(.active):hover {
-  border-color: rgba(201, 169, 110, 0.3);
+  border-color: rgba(0, 0, 0, 0.3);
   color: var(--text-primary);
 }
 
@@ -48,7 +48,7 @@
 }
 
 .project-card:hover {
-  border-color: rgba(201, 169, 110, 0.2);
+  border-color: rgba(0, 0, 0, 0.2);
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
 }
 
@@ -73,7 +73,7 @@
 .project-image-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(10, 10, 15, 0) 0%, rgba(10, 10, 15, 0.5) 50%, rgba(10, 10, 15, 0.9) 100%);
+  background: linear-gradient(180deg, rgba(245, 245, 247, 0) 0%, rgba(245, 245, 247, 0.5) 50%, rgba(245, 245, 247, 0.9) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,7 +97,7 @@
   font-weight: 600;
   color: #fff;
   cursor: pointer;
-  box-shadow: 0 6px 20px rgba(201, 169, 110, 0.35);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
   font-family: var(--font-primary);
 }
 
@@ -152,8 +152,8 @@
 
 .project-tech-tag {
   padding: 4px 12px;
-  background: rgba(201, 169, 110, 0.06);
-  border: 1px solid rgba(201, 169, 110, 0.12);
+  background: rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 20px;
   font-size: 0.72rem;
   color: var(--accent-1);
@@ -171,8 +171,8 @@
   align-items: center;
   gap: 6px;
   padding: 6px 14px;
-  background: rgba(201, 169, 110, 0.06);
-  border: 1px solid rgba(201, 169, 110, 0.15);
+  background: rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 8px;
   font-size: 0.78rem;
   font-weight: 600;
@@ -181,13 +181,13 @@
 }
 
 .project-link:hover {
-  background: rgba(201, 169, 110, 0.12);
+  background: rgba(0, 0, 0, 0.12);
   border-color: var(--accent-1);
   color: var(--accent-1);
 }
 
 .project-link-live {
-  border-color: rgba(168, 216, 200, 0.2);
+  border-color: rgba(0, 113, 227, 0.2);
 }
 
 .project-link-live:hover {
@@ -278,7 +278,7 @@
 }
 
 .star-close:hover {
-  background: rgba(212, 180, 131, 0.3);
+  background: rgba(0, 0, 0, 0.3);
   border-color: var(--accent-2);
 }
 
@@ -298,7 +298,7 @@
 .star-modal-header-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(15, 15, 26, 0.3) 0%, rgba(15, 15, 26, 0.95) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.95) 100%);
 }
 
 .star-modal-header-content {
@@ -360,7 +360,7 @@
 }
 
 .star-method-icon {
-  color: #c9a96e;
+  color: var(--accent-1);
 }
 
 /* STAR Grid */
@@ -380,7 +380,7 @@
 }
 
 .star-item:hover {
-  border-color: rgba(201, 169, 110, 0.2);
+  border-color: rgba(0, 0, 0, 0.2);
 }
 
 .star-item-header {

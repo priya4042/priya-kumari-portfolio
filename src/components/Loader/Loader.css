@@ -13,7 +13,7 @@
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(rgba(201, 169, 110, 0.04) 1px, transparent 1px);
+    radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px);
   background-size: 30px 30px;
 }
 
@@ -41,13 +41,13 @@
   border-radius: 50%;
   border: 2px solid transparent;
   border-top-color: var(--accent-1);
-  border-right-color: rgba(201, 169, 110, 0.2);
+  border-right-color: rgba(0, 0, 0, 0.2);
 }
 
 .loader-ring-2 {
   inset: 12px;
   border-top-color: var(--accent-2);
-  border-right-color: rgba(212, 180, 131, 0.2);
+  border-right-color: rgba(0, 0, 0, 0.2);
 }
 
 .loader-center-logo {
@@ -81,7 +81,7 @@
 .loader-bar {
   width: 240px;
   height: 2px;
-  background: rgba(201, 169, 110, 0.1);
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   overflow: hidden;
 }
@@ -90,7 +90,7 @@
   height: 100%;
   background: var(--gradient-primary);
   border-radius: 10px;
-  box-shadow: 0 0 12px rgba(201, 169, 110, 0.5);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
 }
 
 .loader-dots {

@@ -17,9 +17,9 @@ const categoryIcons = {
 };
 
 const difficultyColors = {
-  easy: { bg: 'rgba(168, 216, 200, 0.1)', border: 'rgba(168, 216, 200, 0.25)', text: '#a8d8c8' },
-  medium: { bg: 'rgba(201, 169, 110, 0.1)', border: 'rgba(201, 169, 110, 0.25)', text: '#c9a96e' },
-  hard: { bg: 'rgba(212, 180, 131, 0.1)', border: 'rgba(212, 180, 131, 0.25)', text: '#d4b483' },
+  easy: { bg: 'rgba(0, 113, 227, 0.1)', border: 'rgba(0, 113, 227, 0.25)', text: '#34c759' },
+  medium: { bg: 'rgba(0, 0, 0, 0.1)', border: 'rgba(0, 0, 0, 0.25)', text: '#1d1d1f' },
+  hard: { bg: 'rgba(0, 0, 0, 0.1)', border: 'rgba(0, 0, 0, 0.25)', text: '#6e6e73' },
 };
 
 const QuestionCard = ({ q, isOpen, onToggle }) => {

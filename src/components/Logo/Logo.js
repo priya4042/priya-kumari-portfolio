@@ -1,4 +1,3 @@
-import React from 'react';
 import './Logo.css';
 
 const Logo = ({ size = 'md', showText = false, className = '' }) => {
@@ -24,17 +23,16 @@ const Logo = ({ size = 'md', showText = false, className = '' }) => {
         >
           <defs>
             <linearGradient id="logoGradBg" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#1a1a1a" />
-              <stop offset="100%" stopColor="#141414" />
+              <stop offset="0%" stopColor="#1d1d1f" />
+              <stop offset="100%" stopColor="#2c2c2e" />
             </linearGradient>
             <linearGradient id="logoGradText" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#c9a96e" />
-              <stop offset="100%" stopColor="#d4b483" />
+              <stop offset="0%" stopColor="#ffffff" />
+              <stop offset="100%" stopColor="#e5e5ea" />
             </linearGradient>
             <linearGradient id="logoGradBorder" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#c9a96e" stopOpacity="0.6" />
-              <stop offset="50%" stopColor="#d4b483" stopOpacity="0.3" />
-              <stop offset="100%" stopColor="#d4b483" stopOpacity="0.6" />
+              <stop offset="0%" stopColor="#ffffff" stopOpacity="0.2" />
+              <stop offset="100%" stopColor="#ffffff" stopOpacity="0.05" />
             </linearGradient>
             <filter id="logoGlow">
               <feGaussianBlur stdDeviation="3" result="blur" />
@@ -96,7 +94,7 @@ const Logo = ({ size = 'md', showText = false, className = '' }) => {
           {/* Slash / */}
           <path
             d="M85 85L93 75"
-            stroke="#a8d8c8"
+            stroke="#34c759"
             strokeWidth="3.5"
             strokeLinecap="round"
             opacity="0.8"
@@ -119,8 +117,8 @@ const Logo = ({ size = 'md', showText = false, className = '' }) => {
           />
 
           {/* Accent dot */}
-          <circle cx="104" cy="24" r="5" fill="#a8d8c8" opacity="0.7" />
-          <circle cx="104" cy="24" r="2.5" fill="#a8d8c8" />
+          <circle cx="104" cy="24" r="5" fill="#34c759" opacity="0.7" />
+          <circle cx="104" cy="24" r="2.5" fill="#34c759" />
         </svg>
       </span>
       {showText && (

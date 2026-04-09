@@ -123,7 +123,7 @@ const Hero = () => {
               animate={{ y: [0, -16, 0], rotate: [0, 2, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
             >
-              <div className="fc-icon" style={{ background: 'rgba(201, 169, 110, 0.15)', color: '#c9a96e' }}>
+              <div className="fc-icon" style={{ background: 'rgba(0, 0, 0, 0.15)', color: '#1d1d1f' }}>
                 <FaMicrosoft />
               </div>
               <div className="fc-text">
@@ -137,7 +137,7 @@ const Hero = () => {
               animate={{ y: [0, 14, 0], rotate: [0, -2, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
             >
-              <div className="fc-icon" style={{ background: 'rgba(201, 169, 110, 0.12)', color: '#c9a96e' }}>
+              <div className="fc-icon" style={{ background: 'rgba(0, 0, 0, 0.12)', color: '#1d1d1f' }}>
                 <FaJsSquare />
               </div>
               <div className="fc-text">
@@ -151,7 +151,7 @@ const Hero = () => {
               animate={{ y: [0, -12, 0], rotate: [0, 1, 0] }}
               transition={{ duration: 5.5, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
             >
-              <div className="fc-icon" style={{ background: 'rgba(168, 216, 200, 0.12)', color: '#a8d8c8' }}>
+              <div className="fc-icon" style={{ background: 'rgba(0, 113, 227, 0.12)', color: '#34c759' }}>
                 <FaDatabase />
               </div>
               <div className="fc-text">

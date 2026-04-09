@@ -15,7 +15,7 @@
 }
 
 .edu-card:hover {
-  border-color: rgba(201, 169, 110, 0.2);
+  border-color: rgba(0, 0, 0, 0.2);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
@@ -51,7 +51,7 @@
   background: var(--gradient-primary);
   border-radius: 16px;
   font-size: 1.3rem;
-  box-shadow: 0 8px 24px rgba(201, 169, 110, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
   transition: transform 0.3s ease;
 }
 
@@ -61,8 +61,8 @@
 
 .edu-year-badge {
   padding: 6px 16px;
-  background: rgba(201, 169, 110, 0.06);
-  border: 1px solid rgba(201, 169, 110, 0.15);
+  background: rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 22px;
   font-size: 0.78rem;
   color: var(--accent-1);
@@ -97,8 +97,8 @@
   align-items: center;
   gap: 6px;
   padding: 6px 14px;
-  background: rgba(168, 216, 200, 0.08);
-  border: 1px solid rgba(168, 216, 200, 0.15);
+  background: rgba(0, 113, 227, 0.08);
+  border: 1px solid rgba(0, 113, 227, 0.15);
   border-radius: 20px;
   font-size: 0.78rem;
   font-weight: 600;
@@ -116,7 +116,7 @@
   font-family: var(--font-display);
   font-size: 3.5rem;
   font-weight: 900;
-  color: rgba(201, 169, 110, 0.04);
+  color: rgba(0, 0, 0, 0.04);
   line-height: 1;
   pointer-events: none;
 }

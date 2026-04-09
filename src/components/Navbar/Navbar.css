@@ -10,11 +10,11 @@
 
 .navbar.scrolled {
   padding: 10px 0;
-  background: rgba(10, 10, 15, 0.9);
-  backdrop-filter: blur(24px) saturate(180%);
-  -webkit-backdrop-filter: blur(24px) saturate(180%);
-  border-bottom: 1px solid var(--border-color);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background: rgba(245, 245, 247, 0.85);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
 }
 
 .nav-container {
@@ -91,7 +91,7 @@
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 18px rgba(201, 169, 110, 0.2);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
 }
 
 .cta-dot {
@@ -104,7 +104,7 @@
 
 .nav-cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(201, 169, 110, 0.4);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
 .hamburger {
@@ -139,12 +139,12 @@
   width: 80%;
   max-width: 340px;
   height: 100vh;
-  background: rgba(15, 15, 26, 0.98);
+  background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(20px);
   z-index: 999;
   display: flex;
   flex-direction: column;
-  border-left: 1px solid var(--border-color);
+  border-left: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .mobile-menu-header {
@@ -182,7 +182,7 @@
 .mobile-nav-link:hover,
 .mobile-nav-link.active {
   color: var(--text-primary);
-  background: rgba(201, 169, 110, 0.08);
+  background: rgba(0, 0, 0, 0.08);
 }
 
 .mobile-link-number {

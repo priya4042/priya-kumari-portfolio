@@ -16,51 +16,43 @@ const ParticlesBackground = () => {
         background: { color: { value: 'transparent' } },
         fpsLimit: 60,
         particles: {
-          color: { value: '#c9a96e' },
+          color: { value: '#d1d1d6' },
           links: {
-            color: '#c9a96e',
-            distance: 150,
+            color: '#c7c7cc',
+            distance: 160,
             enable: true,
-            opacity: 0.08,
-            width: 1,
+            opacity: 0.25,
+            width: 0.8,
           },
           move: {
             enable: true,
-            speed: 0.6,
+            speed: 0.4,
             direction: 'none',
             random: true,
             straight: false,
             outModes: { default: 'bounce' },
           },
           number: {
-            density: { enable: true, area: 1000 },
-            value: 60,
+            density: { enable: true, area: 1200 },
+            value: 40,
           },
           opacity: {
-            value: { min: 0.1, max: 0.4 },
-            animation: {
-              enable: true,
-              speed: 0.5,
-              minimumValue: 0.1,
-            },
+            value: { min: 0.15, max: 0.35 },
           },
           shape: { type: 'circle' },
           size: {
-            value: { min: 1, max: 3 },
+            value: { min: 1, max: 2 },
           },
         },
         interactivity: {
           events: {
-            onHover: {
-              enable: true,
-              mode: 'grab',
-            },
+            onHover: { enable: true, mode: 'grab' },
             resize: true,
           },
           modes: {
             grab: {
-              distance: 140,
-              links: { opacity: 0.2 },
+              distance: 120,
+              links: { opacity: 0.3 },
             },
           },
         },

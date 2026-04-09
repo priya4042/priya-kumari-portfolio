@@ -8,7 +8,7 @@
   left: -4px;
   pointer-events: none;
   z-index: 100001;
-  mix-blend-mode: difference;
+  mix-blend-mode: normal;
   transition: transform 0.15s ease, background 0.2s ease;
 }
 
@@ -20,7 +20,7 @@
 .cursor-ring {
   width: 40px;
   height: 40px;
-  border: 2px solid rgba(201, 169, 110, 0.45);
+  border: 2px solid rgba(0, 0, 0, 0.45);
   border-radius: 50%;
   position: fixed;
   top: -20px;
@@ -41,8 +41,8 @@
   height: 64px;
   top: -32px;
   left: -32px;
-  border-color: rgba(212, 180, 131, 0.5);
-  background: rgba(201, 169, 110, 0.06);
+  border-color: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.06);
   backdrop-filter: blur(2px);
 }
 

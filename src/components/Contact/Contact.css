@@ -58,7 +58,7 @@
 }
 
 .contact-card:hover {
-  border-color: rgba(201, 169, 110, 0.2);
+  border-color: rgba(0, 0, 0, 0.2);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -72,7 +72,7 @@
   background: var(--gradient-primary);
   border-radius: 14px;
   font-size: 1.1rem;
-  box-shadow: 0 6px 18px rgba(201, 169, 110, 0.2);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
 .contact-card h4 {
@@ -121,7 +121,7 @@
   background: var(--gradient-primary);
   border-color: transparent;
   color: #fff;
-  box-shadow: 0 8px 28px rgba(201, 169, 110, 0.3);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
 }
 
 /* Code Block */
@@ -207,7 +207,7 @@
 .input-wrapper textarea {
   width: 100%;
   padding: 18px 16px 10px;
-  background: rgba(201, 169, 110, 0.03);
+  background: rgba(0, 0, 0, 0.03);
   border: 1px solid var(--border-color);
   border-radius: 12px;
   color: var(--text-primary);
@@ -220,8 +220,8 @@
 .input-wrapper input:focus,
 .input-wrapper textarea:focus {
   border-color: var(--accent-1);
-  background: rgba(201, 169, 110, 0.05);
-  box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.08);
+  background: rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
 }
 
 .input-wrapper textarea {
@@ -257,7 +257,7 @@
 
 /* Button states */
 .btn.sent {
-  background: linear-gradient(135deg, #a8d8c8, #2ecc71) !important;
+  background: linear-gradient(135deg, var(--accent-3), #2ecc71) !important;
 }
 
 .spin {
