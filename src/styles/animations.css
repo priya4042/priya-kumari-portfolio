@@ -2,21 +2,7 @@
    GLOBAL ANIMATIONS — Apple-Inspired Polish
    ============================================= */
 
-/* ===== Smooth Section Reveal ===== */
-.section {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: sectionReveal 0.8s ease forwards;
-  animation-play-state: paused;
-}
-
-.section.revealed {
-  animation-play-state: running;
-}
-
-@keyframes sectionReveal {
-  to { opacity: 1; transform: translateY(0); }
-}
+/* Sections are revealed by Framer Motion in each component — no CSS override needed */
 
 /* ===== Animated Gradient Border ===== */
 @keyframes gradientShift {
@@ -117,7 +103,7 @@
 .marquee-track {
   display: flex;
   gap: 48px;
-  animation: marqueeScroll 30s linear infinite;
+  animation: marqueeScroll 45s linear infinite;
   width: max-content;
 }
 
