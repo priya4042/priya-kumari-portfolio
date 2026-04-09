@@ -73,12 +73,7 @@
 .project-image-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(10, 10, 15, 0) 0%,
-    rgba(10, 10, 15, 0.5) 50%,
-    rgba(10, 10, 15, 0.9) 100%
-  );
+  background: linear-gradient(180deg, rgba(10, 10, 15, 0) 0%, rgba(10, 10, 15, 0.5) 50%, rgba(10, 10, 15, 0.9) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,10 +91,14 @@
   gap: 8px;
   padding: 10px 22px;
   background: var(--gradient-primary);
+  border: none;
   border-radius: 50px;
   font-size: 0.82rem;
   font-weight: 600;
+  color: #fff;
+  cursor: pointer;
   box-shadow: 0 6px 20px rgba(108, 99, 255, 0.35);
+  font-family: var(--font-primary);
 }
 
 .project-category-badge {
@@ -196,10 +195,32 @@
   color: var(--accent-3);
 }
 
+.project-details-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  padding: 0;
+  background: none;
+  border: none;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent-1);
+  cursor: pointer;
+  font-family: var(--font-primary);
+  transition: all 0.3s ease;
+}
+
+.project-details-btn:hover {
+  color: var(--accent-2);
+  gap: 10px;
+}
+
 .project-learn-more {
   display: flex;
   align-items: center;
   gap: 6px;
+  margin-left: auto;
   font-size: 0.82rem;
   font-weight: 600;
   color: var(--accent-1);
@@ -211,10 +232,227 @@
   color: var(--accent-2);
 }
 
-/* Responsive */
+/* ===== STAR METHOD MODAL ===== */
+.star-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.star-modal {
+  width: 100%;
+  max-width: 720px;
+  max-height: 90vh;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.star-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.star-close:hover {
+  background: rgba(255, 107, 157, 0.3);
+  border-color: var(--accent-2);
+}
+
+/* Modal Header with Image */
+.star-modal-header {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.star-modal-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.star-modal-header-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 15, 26, 0.3) 0%, rgba(15, 15, 26, 0.95) 100%);
+}
+
+.star-modal-header-content {
+  position: absolute;
+  bottom: 20px;
+  left: 28px;
+  right: 28px;
+}
+
+.star-modal-category {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.star-modal-header-content h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.star-modal-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.star-modal-tech span {
+  padding: 3px 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Modal Body */
+.star-modal-body {
+  padding: 28px;
+}
+
+.star-method-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-1);
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.star-method-icon {
+  color: #f7df1e;
+}
+
+/* STAR Grid */
+.star-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.star-item {
+  padding: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.star-item:hover {
+  border-color: rgba(108, 99, 255, 0.2);
+}
+
+.star-item-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.star-item-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.star-item h4 {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.star-item p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* Modal Links */
+.star-modal-links {
+  display: flex;
+  gap: 12px;
+}
+
+.star-modal-links .btn {
+  padding: 12px 24px;
+  font-size: 0.85rem;
+}
+
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr;
   }
   .project-image-wrapper { height: 200px; }
+  .star-grid {
+    grid-template-columns: 1fr;
+  }
+  .star-modal-header { height: 160px; }
+  .star-modal-body { padding: 22px 18px; }
+  .star-modal-header-content h2 { font-size: 1.2rem; }
+  .star-modal-links { flex-direction: column; }
+}
+
+@media (max-width: 480px) {
+  .project-filters {
+    gap: 6px;
+    margin-bottom: 32px;
+  }
+  .filter-btn {
+    padding: 8px 16px;
+    font-size: 0.78rem;
+  }
+  .project-image-wrapper { height: 170px; }
+  .project-content { padding: 18px; }
+  .project-content p { font-size: 0.82rem; -webkit-line-clamp: 2; }
+  .project-tech-tag { font-size: 0.65rem; padding: 3px 8px; }
+  .project-footer { flex-wrap: wrap; }
+  .star-modal { border-radius: 16px; }
+  .star-item { padding: 16px; }
 }

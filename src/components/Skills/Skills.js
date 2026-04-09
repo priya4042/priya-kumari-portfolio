@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Tilt from 'react-parallax-tilt';
+import { Link } from 'react-scroll';
 import {
   FaMicrosoft, FaCode, FaLayerGroup, FaJsSquare, FaDatabase, FaJs, FaPlug,
-  FaServer, FaProjectDiagram, FaPaintBrush,
+  FaServer, FaProjectDiagram, FaPaintBrush, FaLink,
 } from 'react-icons/fa';
 import { skillsData, servicesData } from '../../data/portfolioData';
 import './Skills.css';
@@ -26,45 +27,10 @@ const serviceIconMap = {
   database: FaDatabase,
 };
 
-const SkillRing = ({ percent, inView, delay, color }) => {
-  const radius = 42;
-  const circumference = 2 * Math.PI * radius;
-  const offset = circumference - (circumference * percent) / 100;
-
-  return (
-    <div className="skill-ring">
-      <svg viewBox="0 0 100 100">
-        <defs>
-          <linearGradient id={`grad-${color.replace('#', '')}`} x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor={color} />
-            <stop offset="100%" stopColor={color} stopOpacity="0.4" />
-          </linearGradient>
-        </defs>
-        <circle cx="50" cy="50" r={radius} className="ring-bg" />
-        <motion.circle
-          cx="50"
-          cy="50"
-          r={radius}
-          className="ring-fill"
-          style={{
-            strokeDasharray: circumference,
-            stroke: `url(#grad-${color.replace('#', '')})`,
-          }}
-          initial={{ strokeDashoffset: circumference }}
-          animate={inView ? { strokeDashoffset: offset } : { strokeDashoffset: circumference }}
-          transition={{ duration: 1.8, delay, ease: [0.25, 0.46, 0.45, 0.94] }}
-        />
-      </svg>
-      <motion.span
-        className="skill-percent"
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={inView ? { opacity: 1, scale: 1 } : {}}
-        transition={{ delay: delay + 0.6, type: 'spring' }}
-      >
-        {percent}%
-      </motion.span>
-    </div>
-  );
+const levelColors = {
+  Expert: { bg: 'rgba(78, 205, 196, 0.1)', border: 'rgba(78, 205, 196, 0.3)', text: '#4ecdc4', width: '90%' },
+  Advanced: { bg: 'rgba(108, 99, 255, 0.1)', border: 'rgba(108, 99, 255, 0.3)', text: '#6c63ff', width: '72%' },
+  Intermediate: { bg: 'rgba(255, 107, 157, 0.1)', border: 'rgba(255, 107, 157, 0.3)', text: '#ff6b9d', width: '55%' },
 };
 
 const Skills = () => {
@@ -122,6 +88,7 @@ const Skills = () => {
             >
               {skillsData.map((skill, index) => {
                 const Icon = skillIconMap[skill.icon];
+                const lc = levelColors[skill.level] || levelColors.Intermediate;
                 return (
                   <Tilt
                     key={skill.name}
@@ -144,15 +111,32 @@ const Skills = () => {
                       <div className="skill-icon" style={{ color: skill.color, background: `${skill.color}12` }}>
                         <Icon />
                       </div>
-                      <SkillRing
-                        percent={skill.percent}
-                        inView={inView}
-                        delay={0.3 + index * 0.08}
-                        color={skill.color}
-                      />
                       <h3>{skill.name}</h3>
                       <p className="skill-subtitle">{skill.subtitle}</p>
+
+                      {/* Level badge instead of percentage */}
+                      <div className="skill-level-badge" style={{ background: lc.bg, borderColor: lc.border, color: lc.text }}>
+                        {skill.level}
+                      </div>
+
+                      {/* Animated bar instead of ring */}
+                      <div className="skill-bar">
+                        <motion.div
+                          className="skill-bar-fill"
+                          style={{ background: skill.color }}
+                          initial={{ width: 0 }}
+                          animate={inView ? { width: lc.width } : { width: 0 }}
+                          transition={{ duration: 1.2, delay: 0.3 + index * 0.08, ease: [0.25, 0.46, 0.45, 0.94] }}
+                        />
+                      </div>
+
                       <p className="skill-desc">{skill.description}</p>
+
+                      {/* Link to project */}
+                      <div className="skill-used-in">
+                        <FaLink className="used-in-icon" />
+                        <span>{skill.usedIn}</span>
+                      </div>
                     </motion.div>
                   </Tilt>
                 );
@@ -183,6 +167,11 @@ const Skills = () => {
                     </div>
                     <h3>{service.title}</h3>
                     <p>{service.description}</p>
+                    {service.linkedProject && (
+                      <Link to="projects" smooth duration={600} offset={-80} className="service-project-link">
+                        <FaLink /> Used in: {service.linkedProject}
+                      </Link>
+                    )}
                     <div className="service-number">0{index + 1}</div>
                   </motion.div>
                 );
