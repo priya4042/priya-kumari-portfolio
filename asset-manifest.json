@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/priya-kumari-portfolio/static/css/main.82f9a847.css",
-    "main.js": "/priya-kumari-portfolio/static/js/main.790ee8e4.js",
+    "main.css": "/priya-kumari-portfolio/static/css/main.32bcfe25.css",
+    "main.js": "/priya-kumari-portfolio/static/js/main.e0c63d5c.js",
     "static/js/239.35f3d305.chunk.js": "/priya-kumari-portfolio/static/js/239.35f3d305.chunk.js",
     "static/js/977.6f5243e5.chunk.js": "/priya-kumari-portfolio/static/js/977.6f5243e5.chunk.js",
     "static/js/732.f3377845.chunk.js": "/priya-kumari-portfolio/static/js/732.f3377845.chunk.js",
     "index.html": "/priya-kumari-portfolio/index.html",
-    "main.82f9a847.css.map": "/priya-kumari-portfolio/static/css/main.82f9a847.css.map",
-    "main.790ee8e4.js.map": "/priya-kumari-portfolio/static/js/main.790ee8e4.js.map",
+    "main.32bcfe25.css.map": "/priya-kumari-portfolio/static/css/main.32bcfe25.css.map",
+    "main.e0c63d5c.js.map": "/priya-kumari-portfolio/static/js/main.e0c63d5c.js.map",
     "239.35f3d305.chunk.js.map": "/priya-kumari-portfolio/static/js/239.35f3d305.chunk.js.map",
     "977.6f5243e5.chunk.js.map": "/priya-kumari-portfolio/static/js/977.6f5243e5.chunk.js.map",
     "732.f3377845.chunk.js.map": "/priya-kumari-portfolio/static/js/732.f3377845.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.82f9a847.css",
-    "static/js/main.790ee8e4.js"
+    "static/css/main.32bcfe25.css",
+    "static/js/main.e0c63d5c.js"
   ]
 }
