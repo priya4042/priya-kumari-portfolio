@@ -291,33 +291,33 @@
 
 .hero-image-wrapper {
   position: relative;
-  width: 420px;
-  height: 420px;
+  width: 400px;
+  height: 480px;
 }
 
-/* Decorative rings */
+/* Decorative elements */
 .hero-deco-ring {
   position: absolute;
-  border-radius: 50%;
+  border-radius: 24px;
   border: 1px dashed;
 }
 
 .hero-deco-ring-1 {
-  inset: -20px;
-  border-color: rgba(0, 0, 0, 0.1);
-  animation: spinSlow 25s linear infinite;
+  inset: -14px;
+  border-color: rgba(0, 0, 0, 0.06);
+  animation: spinSlow 40s linear infinite;
+  border-radius: 32px;
 }
 
 .hero-deco-ring-2 {
-  inset: -40px;
-  border-color: rgba(0, 0, 0, 0.06);
-  animation: spinSlow 35s linear infinite reverse;
+  inset: -28px;
+  border-color: rgba(0, 113, 227, 0.04);
+  animation: spinSlow 50s linear infinite reverse;
+  border-radius: 38px;
 }
 
 .hero-deco-ring-3 {
-  inset: -60px;
-  border-color: rgba(0, 113, 227, 0.04);
-  animation: spinSlow 45s linear infinite;
+  display: none;
 }
 
 @keyframes spinSlow {
@@ -327,25 +327,25 @@
 /* Image container */
 .hero-image-container {
   position: absolute;
-  inset: 20px;
+  inset: 0;
   z-index: 2;
 }
 
 .hero-image-gradient-border {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
-  padding: 4px;
-  background: linear-gradient(135deg, #1d1d1f, #6e6e73, #0071e3, #34c759, #1d1d1f);
+  border-radius: 28px;
+  padding: 3px;
+  background: linear-gradient(135deg, #e5e5ea, #1d1d1f, #0071e3, #e5e5ea);
   background-size: 300% 300%;
-  animation: heroFloat 7s ease-in-out infinite, gradientShift 6s ease infinite;
-  box-shadow: var(--shadow-lg);
+  animation: heroFloat 7s ease-in-out infinite, gradientShift 8s ease infinite;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
 .hero-image {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
+  border-radius: 26px;
   object-fit: cover;
   display: block;
   background: var(--bg-card);
@@ -362,13 +362,17 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 12px 18px 12px 12px;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 14px 20px 14px 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: 16px;
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.04);
   z-index: 3;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.floating-card:hover {
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.1);
 }
 
 .fc-icon {
@@ -399,9 +403,9 @@
   font-weight: 500;
 }
 
-.card-1 { top: 5%; right: -12%; }
-.card-2 { bottom: 25%; left: -16%; }
-.card-3 { bottom: 2%; right: 5%; }
+.card-1 { top: 8%; right: -10%; }
+.card-2 { bottom: 20%; left: -14%; }
+.card-3 { bottom: -2%; right: 8%; }
 
 /* Experience badge */
 .hero-exp-badge {
@@ -555,12 +559,12 @@
   .hero-social-row { justify-content: center; }
   .hero-social-line { display: none; }
   .hero-visual { order: -1; }
-  .hero-image-wrapper { width: 340px; height: 340px; }
+  .hero-image-wrapper { width: 320px; height: 400px; }
 }
 
 @media (max-width: 768px) {
   .hero { padding-bottom: 40px; }
-  .hero-image-wrapper { width: 280px; height: 280px; }
+  .hero-image-wrapper { width: 260px; height: 320px; }
   .floating-card { display: none; }
   .hero-exp-badge { display: none; }
   .hero-deco-ring-2, .hero-deco-ring-3 { display: none; }
