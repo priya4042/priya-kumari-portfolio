@@ -46,13 +46,13 @@ export const aboutData = {
 
 // Skills — NO percentages, just level labels
 export const skillsData = [
-  { name: '.NET', subtitle: 'Framework & Core', level: 'Expert', icon: 'microsoft', color: '#1d1d1f', description: 'Building enterprise-grade applications', usedIn: 'CRM Integration Platform' },
-  { name: 'ASP.NET', subtitle: 'Web Applications', level: 'Expert', icon: 'code', color: '#6e6e73', description: 'Scalable MVC web solutions', usedIn: 'Property Tax Portal' },
+  { name: '.NET', subtitle: 'Framework & Core', level: 'Expert', icon: 'microsoft', color: '#0071e3', description: 'Building enterprise-grade applications', usedIn: 'CRM Integration Platform' },
+  { name: 'ASP.NET', subtitle: 'Web Applications', level: 'Expert', icon: 'code', color: '#5856d6', description: 'Scalable MVC web solutions', usedIn: 'Property Tax Portal' },
   { name: 'ASP.NET MVC', subtitle: 'Architecture', level: 'Expert', icon: 'layers', color: '#34c759', description: 'Clean architecture patterns', usedIn: 'Forest Information Portal' },
-  { name: 'JavaScript', subtitle: 'Frontend & Logic', level: 'Advanced', icon: 'js', color: '#1d1d1f', description: 'Interactive user experiences', usedIn: 'All Projects' },
-  { name: 'SQL Server', subtitle: 'Database Mgmt', level: 'Advanced', icon: 'database', color: '#1d1d1f', description: 'Complex queries & optimization', usedIn: 'CRM Integration Platform' },
-  { name: 'jQuery', subtitle: 'DOM Manipulation', level: 'Advanced', icon: 'jquery', color: '#6e6e73', description: 'Dynamic frontend effects', usedIn: 'Hunt Lease Management' },
-  { name: 'REST API', subtitle: 'Integration', level: 'Advanced', icon: 'api', color: '#34c759', description: 'Seamless service connections', usedIn: 'CRM Integration Platform' },
+  { name: 'JavaScript', subtitle: 'Frontend & Logic', level: 'Advanced', icon: 'js', color: '#ff9500', description: 'Interactive user experiences', usedIn: 'All Projects' },
+  { name: 'SQL Server', subtitle: 'Database Mgmt', level: 'Advanced', icon: 'database', color: '#007aff', description: 'Complex queries & optimization', usedIn: 'CRM Integration Platform' },
+  { name: 'jQuery', subtitle: 'DOM Manipulation', level: 'Advanced', icon: 'jquery', color: '#af52de', description: 'Dynamic frontend effects', usedIn: 'Hunt Lease Management' },
+  { name: 'REST API', subtitle: 'Integration', level: 'Advanced', icon: 'api', color: '#30b0c7', description: 'Seamless service connections', usedIn: 'CRM Integration Platform' },
 ];
 
 // Services linked to projects
@@ -91,7 +91,7 @@ export const projectsData = [
     description: 'Led the development of a comprehensive CRM integration platform connecting multiple third-party services with seamless API orchestration.',
     technologies: ['ASP.NET Core', 'REST API', 'SQL Server', 'JavaScript'],
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
-    color: '#1d1d1f',
+    color: '#0071e3',
     github: 'https://github.com/priya4042',
     live: null,
     star: {
@@ -107,7 +107,7 @@ export const projectsData = [
     description: 'Built a full-featured lease management system for tracking property agreements, payments, and tenant communications.',
     technologies: ['ASP.NET MVC', 'SQL Server', 'jQuery', 'Bootstrap'],
     image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop',
-    color: '#6e6e73',
+    color: '#5856d6',
     github: 'https://github.com/priya4042',
     live: null,
     star: {
@@ -139,7 +139,7 @@ export const projectsData = [
     description: 'Created an information portal for forest management and data visualization serving government departments.',
     technologies: ['ASP.NET Core', 'REST API', 'MS SQL', 'jQuery'],
     image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop',
-    color: '#1d1d1f',
+    color: '#0071e3',
     github: 'https://github.com/priya4042',
     live: null,
     star: {
@@ -155,7 +155,7 @@ export const projectsData = [
     description: 'Designed and developed this modern animated portfolio using React.js, Framer Motion, and custom PDF resume generation.',
     technologies: ['React.js', 'Framer Motion', 'CSS3', 'jsPDF'],
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
-    color: '#1d1d1f',
+    color: '#0071e3',
     github: 'https://github.com/priya4042/priya-kumari-portfolio',
     live: 'https://priya4042.github.io/priya-kumari-portfolio',
     star: {

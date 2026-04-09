@@ -22,7 +22,7 @@
   right: -5%;
   width: 550px;
   height: 550px;
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 113, 227, 0.06) 0%, transparent 70%);
   animation: orbFloat 12s ease-in-out infinite;
 }
 
@@ -31,7 +31,7 @@
   left: -8%;
   width: 450px;
   height: 450px;
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(52, 199, 89, 0.05) 0%, transparent 70%);
   animation: orbFloat 15s ease-in-out infinite reverse;
 }
 
@@ -76,7 +76,7 @@
   gap: 10px;
   padding: 8px 20px 8px 14px;
   background: rgba(0, 0, 0, 0.06);
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.04);
   border-radius: 50px;
   font-size: 0.8rem;
   color: var(--accent-3);
@@ -210,17 +210,17 @@
   font-weight: 600;
   font-family: var(--font-primary);
   background: rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   color: var(--text-primary);
   backdrop-filter: blur(10px);
   transition: all 0.4s ease;
 }
 
 .btn-glass:hover {
-  background: rgba(0, 0, 0, 0.15);
-  border-color: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.04);
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
 }
 
 .btn-icon {
@@ -260,7 +260,7 @@
   justify-content: center;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.06);
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.04);
   color: var(--text-secondary);
   font-size: 1rem;
   transition: all 0.3s ease;
@@ -271,7 +271,7 @@
   border-color: var(--accent-1);
   color: #fff;
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
 .hero-social-line {
@@ -338,7 +338,7 @@
   padding: 4px;
   background: var(--gradient-primary);
   box-shadow:
-    0 0 60px rgba(0, 0, 0, 0.2),
+    0 0 60px rgba(0, 0, 0, 0.05),
     0 0 120px rgba(0, 0, 0, 0.08);
   animation: heroFloat 7s ease-in-out infinite;
 }

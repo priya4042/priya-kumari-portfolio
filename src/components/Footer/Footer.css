@@ -115,10 +115,10 @@
   color: #fff;
   font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
   transition: box-shadow 0.3s ease;
 }
 
 .back-to-top a:hover {
-  box-shadow: 0 12px 44px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 12px 44px rgba(0, 0, 0, 0.06);
 }

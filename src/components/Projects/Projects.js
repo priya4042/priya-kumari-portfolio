@@ -51,7 +51,7 @@ const StarMethodModal = ({ project, onClose }) => {
           <div className="star-grid">
             <div className="star-item">
               <div className="star-item-header">
-                <div className="star-item-icon" style={{ background: 'rgba(0, 0, 0, 0.1)', color: '#1d1d1f' }}>
+                <div className="star-item-icon" style={{ background: 'rgba(0, 113, 227, 0.08)', color: '#0071e3' }}>
                   <FaBullseye />
                 </div>
                 <h4>Situation</h4>
@@ -61,7 +61,7 @@ const StarMethodModal = ({ project, onClose }) => {
 
             <div className="star-item">
               <div className="star-item-header">
-                <div className="star-item-icon" style={{ background: 'rgba(0, 0, 0, 0.1)', color: '#6e6e73' }}>
+                <div className="star-item-icon" style={{ background: 'rgba(88, 86, 214, 0.08)', color: '#5856d6' }}>
                   <FaTasks />
                 </div>
                 <h4>Task</h4>
@@ -71,7 +71,7 @@ const StarMethodModal = ({ project, onClose }) => {
 
             <div className="star-item">
               <div className="star-item-header">
-                <div className="star-item-icon" style={{ background: 'rgba(0, 113, 227, 0.1)', color: '#34c759' }}>
+                <div className="star-item-icon" style={{ background: 'rgba(52, 199, 89, 0.08)', color: '#34c759' }}>
                   <FaBolt />
                 </div>
                 <h4>Action</h4>
@@ -81,7 +81,7 @@ const StarMethodModal = ({ project, onClose }) => {
 
             <div className="star-item">
               <div className="star-item-header">
-                <div className="star-item-icon" style={{ background: 'rgba(0, 0, 0, 0.1)', color: '#1d1d1f' }}>
+                <div className="star-item-icon" style={{ background: 'rgba(255, 149, 0, 0.08)', color: '#ff9500' }}>
                   <FaTrophy />
                 </div>
                 <h4>Result</h4>

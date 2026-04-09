@@ -21,8 +21,8 @@
 
 .testimonial-card.active {
   pointer-events: auto;
-  border-color: rgba(0, 0, 0, 0.15);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  border-color: rgba(0, 0, 0, 0.04);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.04);
 }
 
 .quote-icon {
@@ -124,7 +124,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.04);
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;

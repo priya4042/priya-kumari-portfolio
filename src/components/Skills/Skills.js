@@ -28,9 +28,9 @@ const serviceIconMap = {
 };
 
 const levelColors = {
-  Expert: { bg: 'rgba(0, 113, 227, 0.1)', border: 'rgba(0, 113, 227, 0.3)', text: '#34c759', width: '90%' },
-  Advanced: { bg: 'rgba(0, 0, 0, 0.1)', border: 'rgba(0, 0, 0, 0.3)', text: '#1d1d1f', width: '72%' },
-  Intermediate: { bg: 'rgba(0, 0, 0, 0.1)', border: 'rgba(0, 0, 0, 0.3)', text: '#6e6e73', width: '55%' },
+  Expert: { bg: 'rgba(52, 199, 89, 0.08)', border: 'rgba(52, 199, 89, 0.25)', text: '#34c759', width: '90%' },
+  Advanced: { bg: 'rgba(0, 113, 227, 0.08)', border: 'rgba(0, 113, 227, 0.25)', text: '#0071e3', width: '72%' },
+  Intermediate: { bg: 'rgba(88, 86, 214, 0.08)', border: 'rgba(88, 86, 214, 0.25)', text: '#5856d6', width: '55%' },
 };
 
 const Skills = () => {
