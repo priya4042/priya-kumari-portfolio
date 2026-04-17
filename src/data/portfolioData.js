@@ -1,3 +1,6 @@
+import profileImage from '../assets/profile.jpeg';
+import profileImage2 from '../assets/profile2.jpeg';
+
 export const personalInfo = {
   name: 'Priya Kumari',
   roles: [
@@ -14,8 +17,8 @@ export const personalInfo = {
   location: 'India', // Removed specific city as per feedback
   github: 'https://github.com/priya4042',
   linkedin: 'https://www.linkedin.com/in/priya-kumari-developer', // UPDATE with your real LinkedIn URL
-  heroImage: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=600&fit=crop&crop=face',
-  aboutImage: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&h=650&fit=crop&crop=face',
+  heroImage: profileImage,
+  aboutImage: profileImage2,
   stats: [
     { number: 3, label: 'Years Experience', suffix: '+', icon: 'briefcase' },
     { number: 10, label: 'Projects Delivered', suffix: '+', icon: 'code' },
